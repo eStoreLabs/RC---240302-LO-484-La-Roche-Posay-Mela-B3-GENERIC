@@ -376,7 +376,7 @@ $background-color_4: #fff;
       align-content: center;
       flex-basis: 240px;
       &:last-child {
-        margin-bottom: 7rem;
+        margin-bottom: 3rem;
       }
     }
     &__main {
@@ -444,7 +444,6 @@ $background-color_4: #fff;
 
   .es-cross {
     margin: 50px 0;
-    margin-top: 75px;
     background-image: url(../img/bg-routine-min.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -465,7 +464,7 @@ $background-color_4: #fff;
       text-transform: uppercase;
       text-align: center;
       margin: 50px;
-      font-size: 35px;
+      font-size: clamp(1rem, 1.1222rem + 0.8889vw, 2.5rem);
     }
     &__single {
       display: flex;
@@ -518,8 +517,8 @@ $background-color_4: #fff;
     }
     &__name {
       max-width: 16ch;
-      font-size: 20px;
-      margin-top: -20px;
+      font-size: 18px;
+      margin-top: 0;
       padding-top: 0;
       text-transform: uppercase;
     }
@@ -533,7 +532,7 @@ $background-color_4: #fff;
     &__desc {
       font-size: 16px;
       text-transform: none;
-      max-width: 19ch;
+      max-width: 16ch;
       font-family: $Montserrat;
       font-weight: 200;
     }
@@ -550,7 +549,7 @@ $background-color_4: #fff;
   }
 
   .es-obligations {
-    margin-top: 400px;
+    margin-top: 100px;
   }
   .es-obligations__title {
     text-align: center;
@@ -595,6 +594,7 @@ $background-color_4: #fff;
   }
   .es-footer {
     margin: 50px 0;
+    margin-bottom: 0;
   }
   .es-footer__text {
     text-align: center;
@@ -632,6 +632,15 @@ $background-color_4: #fff;
         // padding-left: 100px;
       }
     }
+
+    .es-obligations {
+      margin-top: 400px;
+      background-image: url(../img/footer-bg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right;
+      padding-bottom: 50px;
+    }
   }
 
   @media screen and (max-width: 700px) {
@@ -645,10 +654,11 @@ $background-color_4: #fff;
     }
     .es-cross__single {
       position: static;
-      width: 80vw;
+      width: 95vw;
       text-align: left;
+      padding-right: 10px;
       img {
-        max-width: 30%;
+        max-width: 20%;
         height: auto;
       }
     }
@@ -766,7 +776,7 @@ $background-color_4: #fff;
       background-position: left;
 
       &__content {
-        padding: 4rem 0 4rem 28rem;
+        padding: 4rem 0 4rem 30rem;
         margin-top: -20px;
       }
 
@@ -780,6 +790,20 @@ $background-color_4: #fff;
         max-width: 350px;
         margin: 0 auto;
         padding: 10px 40px;
+      }
+    }
+
+    .es-cross {
+      margin-top: 75px;
+
+      &__name {
+        margin-top: -20px;
+        font-size: 20px;
+      }
+
+      &__desc {
+        max-width: 23ch;
+        font-size: 14px;
       }
     }
   }
