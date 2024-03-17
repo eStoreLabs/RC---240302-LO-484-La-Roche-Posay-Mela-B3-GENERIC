@@ -306,7 +306,7 @@
   transition: background-size 300ms ease-in-out;
 }
 #la-roche.la-roche .es-ingr__main:hover {
-  background-size: 115%;
+  background-size: 105%;
 }
 #la-roche.la-roche .es-ingr__main--1 {
   background-image: url(../img/ingr-1.png);
@@ -357,6 +357,7 @@
 }
 #la-roche.la-roche .es-cross {
   margin: 50px 0;
+  margin-top: 75px;
   background-image: url(../img/bg-routine-min.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -367,13 +368,13 @@
   justify-content: center;
   align-items: flex-end;
   position: relative;
-  min-height: 900px;
+  min-height: 500px;
 }
 #la-roche.la-roche .es-cross:nth-child(2) {
   align-self: flex-start;
 }
 #la-roche.la-roche .es-cross__mainTitle {
-  color: #000;
+  color: #fff;
   text-transform: uppercase;
   text-align: center;
   margin: 50px;
@@ -392,7 +393,7 @@
 #la-roche.la-roche .es-cross__single img {
   max-width: 100%;
   max-height: 100%;
-  height: 400px;
+  height: 500px;
   transition: 0.4s ease-in-out;
 }
 #la-roche.la-roche .es-cross__single:hover img {
@@ -406,24 +407,35 @@
 #la-roche.la-roche .es-cross__single--1 {
   top: 0;
   left: 100px;
+  z-index: 10;
+}
+#la-roche.la-roche .es-cross__single--1 img {
+  height: 500px;
 }
 #la-roche.la-roche .es-cross__single--2 {
-  top: 300px;
-  right: 30px;
+  top: 200px;
+  right: 36px;
+  z-index: 11;
+}
+#la-roche.la-roche .es-cross__single--2 img {
+  height: 300px;
 }
 #la-roche.la-roche .es-cross__single--3 {
-  bottom: -50px;
-  left: 100px;
+  bottom: -312px;
+  left: 86px;
+}
+#la-roche.la-roche .es-cross__single--3 img {
+  height: 375px;
 }
 #la-roche.la-roche .es-cross__name {
-  text-transform: uppercase;
-  max-width: 11ch;
-  font-size: 25px;
-  margin-top: 0;
+  max-width: 16ch;
+  font-size: 20px;
+  margin-top: -20px;
   padding-top: 0;
+  text-transform: uppercase;
 }
 #la-roche.la-roche .es-cross__number {
-  color: var(--es-blue-accent);
+  color: #ad75e3;
   font-weight: bold;
   font-size: clamp(4.375rem, 1.5972rem + 8.8889vw, 9.375rem);
   margin: 0;
@@ -433,10 +445,12 @@
   font-size: 16px;
   text-transform: none;
   max-width: 19ch;
+  font-family: Montserrat, sans-serif;
+  font-weight: 200;
 }
 #la-roche.la-roche .es-cross__link {
   padding: 5px 10px;
-  background-color: var(--es-blue-accent);
+  background-color: #ad75e3;
   color: #fff;
   text-decoration: none;
   font-size: 12px;
@@ -445,7 +459,7 @@
   transition: 0.5s ease;
 }
 #la-roche.la-roche .es-obligations {
-  margin-top: 100px;
+  margin-top: 400px;
 }
 #la-roche.la-roche .es-obligations__title {
   text-align: center;
