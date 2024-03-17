@@ -1,7 +1,5 @@
 @import url("https://use.typekit.net/cnc6cbd.css");
 :root {
-  /* custom variables */
-  /*colors*/
   --es-blue-accent: #009fe3;
 }
 
@@ -330,6 +328,46 @@
   font-family: Montserrat, sans-serif;
   font-weight: 300;
 }
+#la-roche.la-roche .es-effect__title {
+  text-transform: uppercase;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 1.1222rem + 0.8889vw, 2.5rem);
+  text-align: center;
+}
+#la-roche.la-roche .es-effect__title span {
+  color: #ad75e3;
+  font-weight: bold;
+}
+#la-roche.la-roche .es-effect__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#la-roche.la-roche .es-effect__item {
+  min-width: 90%;
+}
+#la-roche.la-roche .es-effect__item-title {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+#la-roche.la-roche .es-effect__item-title span {
+  font-size: 40px;
+}
+#la-roche.la-roche .es-effect__item-title--light {
+  font-weight: 300;
+  font-size: 20px !important;
+}
+#la-roche.la-roche .es-effect__item-description {
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
 #la-roche.la-roche .es-use {
   background-color: #4d237f;
 }
@@ -609,6 +647,25 @@
   }
   #la-roche.la-roche .es-features__content {
     padding-left: 354px;
+  }
+  #la-roche.la-roche .es-effect {
+    background-image: url(../img/creme.png);
+    background-repeat: no-repeat;
+    background-size: 35%;
+    background-position: right;
+    padding-top: 75px;
+    padding-bottom: 50px;
+  }
+  #la-roche.la-roche .es-effect__list {
+    flex-direction: row;
+    max-width: 60%;
+    margin-left: 50px;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+  #la-roche.la-roche .es-effect__item {
+    max-width: 21ch;
+    min-width: 20ch;
   }
 }
 @media screen and (min-width: 800px) {

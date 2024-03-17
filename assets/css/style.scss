@@ -1,7 +1,5 @@
 @import url('https://use.typekit.net/cnc6cbd.css');
 :root {
-  /* custom variables */
-  /*colors*/
   --es-blue-accent: #009fe3;
 }
 
@@ -414,6 +412,58 @@ $background-color_4: #fff;
     }
   }
 
+  .es-effect {
+    &__title {
+      text-transform: uppercase;
+      font-family: $Montserrat;
+      font-weight: 400;
+      font-size: clamp(1rem, 1.1222rem + 0.8889vw, 2.5rem);
+      text-align: center;
+
+      & span {
+        color: #ad75e3;
+        font-weight: bold;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      // align-items: center;
+      // justify-content: center;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    &__item {
+      min-width: 90%;
+    }
+
+    &__item-title {
+      font-family: $Montserrat;
+      font-size: 20px;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 0;
+
+      & span {
+        font-size: 40px;
+      }
+
+      &--light {
+        font-weight: 300;
+        font-size: 20px !important;
+      }
+    }
+
+    &__item-description {
+      font-family: $Montserrat;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+
   .es-use {
     background-color: $purple;
 
@@ -717,6 +767,28 @@ $background-color_4: #fff;
 
       &__content {
         padding-left: 354px;
+      }
+    }
+
+    .es-effect {
+      background-image: url(../img/creme.png);
+      background-repeat: no-repeat;
+      background-size: 35%;
+      background-position: right;
+      padding-top: 75px;
+      padding-bottom: 50px;
+
+      &__list {
+        flex-direction: row;
+        max-width: 60%;
+        margin-left: 50px;
+        gap: 20px;
+        justify-content: flex-start;
+      }
+
+      &__item {
+        max-width: 21ch;
+        min-width: 20ch;
       }
     }
   }
