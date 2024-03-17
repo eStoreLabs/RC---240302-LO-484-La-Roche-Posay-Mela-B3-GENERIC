@@ -9,8 +9,9 @@ $black: #000;
 $blue: var(--es-blue-accent);
 $white: #fff;
 $font-family_1: Locator, 'LocatorWeb', Tahoma, Geneva, Verdana, sans-serif;
+$Montserrat: Montserrat, sans-serif;
 $background-color_1: #1990cd;
-$background-color_2: #a1d8e6;
+$purple: #4d237f;
 $background-color_3: var(--es-blue-accent);
 $background-color_4: #fff;
 
@@ -107,7 +108,7 @@ $background-color_4: #fff;
   img {
     max-width: 100%;
   }
-  font-family: $font-family_1;
+  font-family: $Montserrat;
   font-size: 18px;
   font-weight: 200;
   line-height: 1.2;
@@ -174,6 +175,7 @@ $background-color_4: #fff;
       font-size: clamp(1.125rem, 0.9167rem + 0.6667vw, 1.5rem);
       text-transform: uppercase;
       margin-bottom: 0;
+      font-weight: 300;
       span {
         color: $white;
       }
@@ -200,9 +202,10 @@ $background-color_4: #fff;
     // min-height: 500px;
 
     &__title {
-      font-size: clamp(2rem, 1.7222rem + 0.8889vw, 2.5rem);
+      font-size: clamp(1.2rem, 1.1222rem + 0.8889vw, 2.5rem);
       text-align: center;
       text-transform: uppercase;
+      font-weight: 300;
     }
 
     &__icons {
@@ -220,7 +223,7 @@ $background-color_4: #fff;
       flex-direction: column;
       align-items: center;
       justify-items: flex-start;
-      flex-basis: 16ch;
+      flex-basis: 12ch;
       img {
         max-width: 40px;
       }
@@ -229,13 +232,61 @@ $background-color_4: #fff;
     &__text {
       text-align: center;
       font-size: 0.8rem;
-      font-weight: bold;
+      font-family: $Montserrat;
+      font-weight: 700;
       text-transform: uppercase;
+    }
+  }
+  .es-features {
+    background-color: $purple;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &__content {
+      max-width: 500px;
+      margin: 0 auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font-size: clamp(1rem, 1.1222rem + 0.8889vw, 2.5rem);
+      text-align: center;
+      font-weight: 400;
+      margin-top: 0;
+    }
+
+    &__logo {
+      display: block;
+      max-width: 70%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    &__label-description {
+      display: block;
+      max-width: 350px;
+      margin: 0 auto;
+      padding: 10px 15px;
+      background-color: $white;
+      color: $purple;
+      font-family: $Montserrat;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    &__description {
+      font-family: $Montserrat;
+      font-weight: 300;
+      font-size: 12px;
+      text-align: center;
+      line-height: 1.2;
     }
   }
 
   .es-results {
-    background-color: $background-color_1;
+    background-color: $purple;
     padding: 2rem;
     background-repeat: no-repeat;
     background-position: left;
@@ -243,53 +294,75 @@ $background-color_4: #fff;
     color: $white;
     transition: background-size 300ms ease-in-out;
 
-    &:hover {
-      background-size: 41%;
-    }
-
     &__title {
       text-transform: uppercase;
-      font-size: clamp(2rem, 1.7222rem + 0.8889vw, 2.5rem);
+      font-size: clamp(1rem, 1.1222rem + 0.8889vw, 2.5rem);
       line-height: 1;
       max-width: 25ch;
       margin: auto;
+      margin-bottom: 40px;
     }
 
     &__content {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 475px;
     }
 
     &__single {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: flex-start;
       align-items: center;
-      flex-basis: 20ch;
       font-weight: 400;
       text-transform: uppercase;
+
+      &::before {
+        display: inline-block;
+        align-self: flex-start;
+        margin-right: 10px;
+        height: 30px;
+        min-width: 40px;
+        content: '';
+        background: url(../img/check-icon.png) no-repeat 0 0;
+        background-size: 25px 25px;
+      }
+
       span {
         font-weight: bold;
         font-size: 4.3rem;
       }
+
+      & strong {
+        display: block;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+      }
     }
 
     &__text {
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      font-weight: 400;
-      text-align: center;
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.5;
+      margin: 0;
+      text-transform: none;
     }
   }
 
   .es-ingr {
+    padding-top: 40px;
+
     &__title {
+      margin-top: 0;
+      margin-bottom: 40px;
       text-align: center;
       text-transform: uppercase;
       font-weight: bold;
-      font-size: clamp(2rem, 1.7222rem + 0.8889vw, 2.5rem);
+      font-size: clamp(1rem, 1.1222rem + 0.8889vw, 2.5rem);
     }
     &__container {
       display: flex;
@@ -318,16 +391,13 @@ $background-color_4: #fff;
       }
     }
     &__main--1 {
-      background-image: url(../img/kwas-hialuronowy.png);
+      background-image: url(../img/ingr-1.png);
     }
     &__main--2 {
-      background-image: url(../img/wit-B5.png);
+      background-image: url(../img/ingr-2.png);
     }
     &__main--3 {
-      background-image: url(../img/gliceryna.png);
-    }
-    &__main--4 {
-      background-image: url(../img/wit-E.png);
+      background-image: url(../img/ingr-3.png);
     }
     &__name {
       text-transform: uppercase;
@@ -337,14 +407,15 @@ $background-color_4: #fff;
       transition: 0.4s ease-in-out;
     }
     &__desc {
-      text-transform: uppercase;
-      font-size: 0.8rem;
+      font-size: 1rem;
       font-weight: 400;
+      font-family: $Montserrat;
+      font-weight: 300;
     }
   }
 
   .es-use {
-    background-color: $background-color_2;
+    background-color: $purple;
 
     &__content {
       padding: 1.5rem;
@@ -352,7 +423,7 @@ $background-color_4: #fff;
     &__title {
       text-transform: uppercase;
       font-weight: bold;
-      font-size: clamp(2rem, 1.7222rem + 0.8889vw, 2.5rem);
+      font-size: clamp(1rem, 1.1222rem + 0.8889vw, 2.5rem);
     }
   }
 
@@ -506,6 +577,7 @@ $background-color_4: #fff;
     text-shadow: 2px -1px 19px rgb(66, 68, 90);
     padding: 10px;
     font-weight: bolder;
+    margin-bottom: 5px;
   }
   .es-footer {
     margin: 50px 0;
@@ -517,102 +589,183 @@ $background-color_4: #fff;
   }
 
   @media screen and (min-width: 600px) {
-    #la-roche.la-roche {
-      .es-results {
-        padding: 4rem 0 4rem 12rem;
-        background-image: url(../img/lrp-hyalu-b5-aquagel-spf30-pack-with-derm-hand-blue-background.jpg);
+    .es-results {
+      padding: 4rem 0 4rem 20rem;
+      background-image: url(../img/mela-b3.png);
+      background-size: cover;
+      background-position: -100px;
+    }
+    .es-ingr__container {
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .es-ingr {
+      background-image: url(../img/es-ing-bg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right;
+    }
+
+    .es-features {
+      // background-position: -150px;
+
+      &__logo {
+        max-width: 65%;
       }
-      .es-ingr__container {
-        justify-content: space-between;
-        gap: unset;
-      }
-      .es-use {
-        background-image: url(../img/bg-use-min.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: right;
-      }
-      .es-use__content {
-        max-width: 45%;
-        padding: 1rem 7rem;
+
+      &__content {
+        // padding-left: 100px;
       }
     }
   }
 
   @media screen and (max-width: 700px) {
-    #la-roche.la-roche {
-      .es-cross__mainTitle {
-        margin-bottom: unset;
+    .es-cross__mainTitle {
+      margin-bottom: unset;
+    }
+    .es-cross {
+      background-image: none;
+      width: 100%;
+      display: flex;
+    }
+    .es-cross__single {
+      position: static;
+      width: 80vw;
+      text-align: left;
+      img {
+        max-width: 30%;
+        height: auto;
       }
-      .es-cross {
-        background-image: none;
-        width: 100%;
-        display: flex;
-      }
-      .es-cross__single {
-        position: static;
-        width: 80vw;
-        text-align: left;
-        img {
-          max-width: 30%;
-          height: auto;
-        }
-      }
-      .es-cross__name {
-        text-align: left;
-      }
-      .es-cross__single--2 {
-        margin: 5rem 0 2rem 0;
-        text-align: right;
-      }
+    }
+    .es-cross__name {
+      text-align: left;
+    }
+    .es-cross__single--2 {
+      margin: 5rem 0 2rem 0;
+      text-align: right;
     }
   }
   @media screen and (max-width: 600px) {
-    #la-roche.la-roche {
-      .es-kv {
-        background-position: 40% 80%;
-        background-size: 150%;
+    .es-kv {
+      background-position: 40% 80%;
+      background-size: 150%;
+    }
+    .es-kv__brand {
+      width: 200px;
+      left: 15%;
+    }
+    .es-kv__content {
+      margin-top: 50px;
+    }
+    .es-kv__title {
+      text-align: center;
+    }
+    .es-kv__claim {
+      text-align: center;
+    }
+    .es-use__content {
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    .es-use {
+      background-image: url(../img/bg-use-min.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left;
+
+      &__content {
+        max-width: 58%;
+        padding: 1rem 17rem;
+        padding-right: 0;
       }
-      .es-kv__brand {
-        width: 200px;
-        left: 15%;
-      }
-      .es-kv__content {
-        margin-top: 50px;
-      }
-      .es-kv__title {
-        text-align: center;
-      }
-      .es-kv__claim {
-        text-align: center;
-      }
-      .es-use__content {
-        max-width: 100%;
+    }
+
+    .es-features {
+      // background-position: -50px;
+      background-image: url(../img/feat-ingr-bg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      &__content {
+        padding-left: 354px;
       }
     }
   }
 
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 800px) {
+    .es-features {
+      background-position: left;
+    }
+  }
+
+  @media screen and (min-width: 985px) {
     .es-kv {
       padding-top: 0;
       padding-right: 0;
       justify-content: space-between;
+
+      &__content {
+        padding-right: 0;
+        margin-left: 30px;
+      }
+
+      &__title {
+        font-size: clamp(1.5rem, 1.5rem + 0.6667vw, 1.7rem);
+      }
+
+      &__text {
+        padding-right: 0;
+      }
 
       &__packshot img {
         max-width: 130px;
       }
 
       &__photo {
-        width: 440px;
+        width: 420px;
+        margin-right: -1px;
       }
     }
-  }
-}
-#la-roche {
-  .es-effects {
-    .es-effects__title {
-      span {
-        color: $blue;
+
+    .es-results {
+      background-position: left;
+    }
+
+    .es-results {
+      padding: 4rem 0 4rem 30rem;
+    }
+
+    .es-use {
+      &__content {
+        max-width: 58%;
+        padding: 1rem 24rem;
+        padding-right: 0;
+      }
+    }
+
+    .es-features {
+      background-position: left;
+
+      &__content {
+        padding: 4rem 0 4rem 28rem;
+        margin-top: -20px;
+      }
+
+      &__description {
+        font-size: 15px;
+        font-weight: 100;
+      }
+
+      &__label-description {
+        display: block;
+        max-width: 350px;
+        margin: 0 auto;
+        padding: 10px 40px;
       }
     }
   }
