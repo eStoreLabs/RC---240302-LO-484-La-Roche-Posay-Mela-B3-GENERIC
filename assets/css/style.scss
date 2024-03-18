@@ -141,7 +141,7 @@ $background-color_4: #fff;
       animation: slidedown 0.6s ease forwards;
       -webkit-animation-delay: 0.3s;
       animation-delay: 0.3s;
-      max-width: 250px;
+      max-width: 222px;
       height: 100%;
       // margin-top: -20px;
     }
@@ -159,6 +159,7 @@ $background-color_4: #fff;
       justify-content: center;
       align-items: center;
       padding: 20px;
+      padding-top: 0;
       min-width: 300px;
       -webkit-animation: slideright 0.6s ease forwards;
       animation: slideright 0.6s ease forwards;
@@ -200,7 +201,7 @@ $background-color_4: #fff;
     // min-height: 500px;
 
     &__title {
-      font-size: clamp(1.2rem, 1.1222rem + 0.8889vw, 2.5rem);
+      font-size: clamp(1.2rem, 1.1222rem + 0.8889vw, 1.8rem);
       text-align: center;
       text-transform: uppercase;
       font-weight: 300;
@@ -249,10 +250,11 @@ $background-color_4: #fff;
 
     &__title {
       text-transform: uppercase;
-      font-size: clamp(1rem, 1.1222rem + 0.8889vw, 2.5rem);
+      font-size: clamp(1rem, 1.1222rem + 0.8889vw, 1.8rem);
       text-align: center;
       font-weight: 400;
       margin-top: 0;
+      margin-bottom: 10px;
     }
 
     &__logo {
@@ -294,7 +296,7 @@ $background-color_4: #fff;
 
     &__title {
       text-transform: uppercase;
-      font-size: clamp(1rem, 1.1222rem + 0.8889vw, 2.5rem);
+      font-size: clamp(1rem, 1.1222rem + 0.8889vw, 1.8rem);
       line-height: 1;
       max-width: 25ch;
       margin: auto;
@@ -360,7 +362,7 @@ $background-color_4: #fff;
       text-align: center;
       text-transform: uppercase;
       font-weight: bold;
-      font-size: clamp(1rem, 1.1222rem + 0.8889vw, 2.5rem);
+      font-size: clamp(1rem, 1.1222rem + 0.8889vw, 1.8rem);
     }
     &__container {
       display: flex;
@@ -405,7 +407,7 @@ $background-color_4: #fff;
       transition: 0.4s ease-in-out;
     }
     &__desc {
-      font-size: 1rem;
+      font-size: 14px;
       font-weight: 400;
       font-family: $Montserrat;
       font-weight: 300;
@@ -417,7 +419,7 @@ $background-color_4: #fff;
       text-transform: uppercase;
       font-family: $Montserrat;
       font-weight: 400;
-      font-size: clamp(1rem, 1.1222rem + 0.8889vw, 2.5rem);
+      font-size: clamp(1rem, 1.1222rem + 0.8889vw, 1.8rem);
       text-align: center;
 
       & span {
@@ -471,23 +473,30 @@ $background-color_4: #fff;
       padding: 1.5rem;
     }
     &__title {
-      text-transform: uppercase;
+      margin-bottom: 26px;
+      font-size: clamp(1rem, 1.1222rem + 0.8889vw, 1.8rem);
       font-weight: bold;
-      font-size: clamp(1rem, 1.1222rem + 0.8889vw, 2.5rem);
+      text-transform: uppercase;
     }
-  }
 
-  ol {
-    list-style: none;
-    counter-reset: my-counter;
-    li {
-      counter-increment: my-counter;
-      margin-bottom: 0.7em;
-      padding: 0 0 0 0.5em;
-      &::marker {
-        content: counter(my-counter) '.';
-        font-weight: 400;
-        font-size: 1.5rem;
+    & ol {
+      list-style: none;
+      counter-reset: my-counter;
+      max-width: 382px;
+      font-size: 13px;
+      margin-left: -30px;
+      li {
+        counter-increment: my-counter;
+        margin-bottom: 1.5em;
+        padding: 0 0 0 1em;
+        line-height: 1.4;
+        &::marker {
+          content: counter(my-counter) '.';
+          font-weight: 400;
+          font-size: 0.8rem;
+          font-family: $Montserrat;
+          font-weight: bold;
+        }
       }
     }
   }
@@ -513,8 +522,8 @@ $background-color_4: #fff;
       color: $white;
       text-transform: uppercase;
       text-align: center;
-      margin: 50px;
-      font-size: clamp(1rem, 1.1222rem + 0.8889vw, 2.5rem);
+      padding-top: 50px;
+      font-size: clamp(1rem, 1.1222rem + 0.9889vw, 5.1rem);
     }
     &__single {
       display: flex;
@@ -671,6 +680,13 @@ $background-color_4: #fff;
       background-position: right;
     }
 
+    .es-cross__bg {
+      background-image: url(../img/cross-bg.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: left -275px;
+    }
+
     .es-features {
       // background-position: -150px;
 
@@ -781,7 +797,7 @@ $background-color_4: #fff;
       &__list {
         flex-direction: row;
         max-width: 60%;
-        margin-left: 50px;
+        margin-left: 40px;
         gap: 20px;
         justify-content: flex-start;
       }
@@ -811,7 +827,7 @@ $background-color_4: #fff;
       }
 
       &__title {
-        font-size: clamp(1.5rem, 1.5rem + 0.6667vw, 1.7rem);
+        font-size: clamp(1.5rem, 1.5rem + 0.6667vw, 1.8rem);
       }
 
       &__text {
@@ -828,18 +844,30 @@ $background-color_4: #fff;
       }
     }
 
+    .es-effect {
+      &__title {
+        margin-bottom: 0;
+      }
+    }
+
+    .es-effects {
+      &__title {
+        margin-bottom: 50px;
+      }
+    }
+
     .es-results {
       background-position: left;
     }
 
     .es-results {
-      padding: 4rem 0 4rem 30rem;
+      padding: 3.7rem 0 4rem 34rem;
     }
 
     .es-use {
       &__content {
         max-width: 58%;
-        padding: 1rem 24rem;
+        padding: 1rem 27rem;
         padding-right: 0;
       }
     }
@@ -848,12 +876,15 @@ $background-color_4: #fff;
       background-position: left;
 
       &__content {
-        padding: 4rem 0 4rem 30rem;
+        padding: 2.3rem 0 4rem 24rem;
         margin-top: -20px;
       }
 
       &__description {
-        font-size: 15px;
+        max-width: 433px;
+        margin: 0 auto;
+        line-height: 1.4;
+        font-size: 13px;
         font-weight: 100;
       }
 
@@ -862,6 +893,7 @@ $background-color_4: #fff;
         max-width: 350px;
         margin: 0 auto;
         padding: 10px 40px;
+        margin-bottom: 25px;
       }
     }
 

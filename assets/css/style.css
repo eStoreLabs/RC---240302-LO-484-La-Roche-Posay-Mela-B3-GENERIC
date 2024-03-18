@@ -90,7 +90,7 @@
 #la-roche.la-roche .es-kv__brand {
   animation: slidedown 0.6s ease forwards;
   animation-delay: 0.3s;
-  max-width: 250px;
+  max-width: 222px;
   height: 100%;
 }
 #la-roche.la-roche .es-kv__logo {
@@ -104,6 +104,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
+  padding-top: 0;
   min-width: 300px;
   animation: slideright 0.6s ease forwards;
 }
@@ -136,7 +137,7 @@
   background-size: initial;
 }
 #la-roche.la-roche .es-effects__title {
-  font-size: clamp(1.2rem, 1.1222rem + 0.8889vw, 2.5rem);
+  font-size: clamp(1.2rem, 1.1222rem + 0.8889vw, 1.8rem);
   text-align: center;
   text-transform: uppercase;
   font-weight: 300;
@@ -180,10 +181,11 @@
 }
 #la-roche.la-roche .es-features__title {
   text-transform: uppercase;
-  font-size: clamp(1rem, 1.1222rem + 0.8889vw, 2.5rem);
+  font-size: clamp(1rem, 1.1222rem + 0.8889vw, 1.8rem);
   text-align: center;
   font-weight: 400;
   margin-top: 0;
+  margin-bottom: 10px;
 }
 #la-roche.la-roche .es-features__logo {
   display: block;
@@ -220,7 +222,7 @@
 }
 #la-roche.la-roche .es-results__title {
   text-transform: uppercase;
-  font-size: clamp(1rem, 1.1222rem + 0.8889vw, 2.5rem);
+  font-size: clamp(1rem, 1.1222rem + 0.8889vw, 1.8rem);
   line-height: 1;
   max-width: 25ch;
   margin: auto;
@@ -278,7 +280,7 @@
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: clamp(1rem, 1.1222rem + 0.8889vw, 2.5rem);
+  font-size: clamp(1rem, 1.1222rem + 0.8889vw, 1.8rem);
 }
 #la-roche.la-roche .es-ingr__container {
   display: flex;
@@ -323,7 +325,7 @@
   transition: 0.4s ease-in-out;
 }
 #la-roche.la-roche .es-ingr__desc {
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 400;
   font-family: Montserrat, sans-serif;
   font-weight: 300;
@@ -332,7 +334,7 @@
   text-transform: uppercase;
   font-family: Montserrat, sans-serif;
   font-weight: 400;
-  font-size: clamp(1rem, 1.1222rem + 0.8889vw, 2.5rem);
+  font-size: clamp(1rem, 1.1222rem + 0.8889vw, 1.8rem);
   text-align: center;
 }
 #la-roche.la-roche .es-effect__title span {
@@ -375,23 +377,30 @@
   padding: 1.5rem;
 }
 #la-roche.la-roche .es-use__title {
-  text-transform: uppercase;
+  margin-bottom: 26px;
+  font-size: clamp(1rem, 1.1222rem + 0.8889vw, 1.8rem);
   font-weight: bold;
-  font-size: clamp(1rem, 1.1222rem + 0.8889vw, 2.5rem);
+  text-transform: uppercase;
 }
-#la-roche.la-roche ol {
+#la-roche.la-roche .es-use ol {
   list-style: none;
   counter-reset: my-counter;
+  max-width: 382px;
+  font-size: 13px;
+  margin-left: -30px;
 }
-#la-roche.la-roche ol li {
+#la-roche.la-roche .es-use ol li {
   counter-increment: my-counter;
-  margin-bottom: 0.7em;
-  padding: 0 0 0 0.5em;
+  margin-bottom: 1.5em;
+  padding: 0 0 0 1em;
+  line-height: 1.4;
 }
-#la-roche.la-roche ol li::marker {
+#la-roche.la-roche .es-use ol li::marker {
   content: counter(my-counter) ".";
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 0.8rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
 }
 #la-roche.la-roche .es-cross {
   margin: 50px 0;
@@ -414,8 +423,8 @@
   color: #fff;
   text-transform: uppercase;
   text-align: center;
-  margin: 50px;
-  font-size: clamp(1rem, 1.1222rem + 0.8889vw, 2.5rem);
+  padding-top: 50px;
+  font-size: clamp(1rem, 1.1222rem + 0.9889vw, 5.1rem);
 }
 #la-roche.la-roche .es-cross__single {
   display: flex;
@@ -565,6 +574,12 @@
     background-size: cover;
     background-position: right;
   }
+  #la-roche.la-roche .es-cross__bg {
+    background-image: url(../img/cross-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left -275px;
+  }
   #la-roche.la-roche .es-features__logo {
     max-width: 65%;
   }
@@ -659,7 +674,7 @@
   #la-roche.la-roche .es-effect__list {
     flex-direction: row;
     max-width: 60%;
-    margin-left: 50px;
+    margin-left: 40px;
     gap: 20px;
     justify-content: flex-start;
   }
@@ -684,7 +699,7 @@
     margin-left: 30px;
   }
   #la-roche.la-roche .es-kv__title {
-    font-size: clamp(1.5rem, 1.5rem + 0.6667vw, 1.7rem);
+    font-size: clamp(1.5rem, 1.5rem + 0.6667vw, 1.8rem);
   }
   #la-roche.la-roche .es-kv__text {
     padding-right: 0;
@@ -696,26 +711,35 @@
     width: 420px;
     margin-right: -1px;
   }
+  #la-roche.la-roche .es-effect__title {
+    margin-bottom: 0;
+  }
+  #la-roche.la-roche .es-effects__title {
+    margin-bottom: 50px;
+  }
   #la-roche.la-roche .es-results {
     background-position: left;
   }
   #la-roche.la-roche .es-results {
-    padding: 4rem 0 4rem 30rem;
+    padding: 3.7rem 0 4rem 34rem;
   }
   #la-roche.la-roche .es-use__content {
     max-width: 58%;
-    padding: 1rem 24rem;
+    padding: 1rem 27rem;
     padding-right: 0;
   }
   #la-roche.la-roche .es-features {
     background-position: left;
   }
   #la-roche.la-roche .es-features__content {
-    padding: 4rem 0 4rem 30rem;
+    padding: 2.3rem 0 4rem 24rem;
     margin-top: -20px;
   }
   #la-roche.la-roche .es-features__description {
-    font-size: 15px;
+    max-width: 433px;
+    margin: 0 auto;
+    line-height: 1.4;
+    font-size: 13px;
     font-weight: 100;
   }
   #la-roche.la-roche .es-features__label-description {
@@ -723,6 +747,7 @@
     max-width: 350px;
     margin: 0 auto;
     padding: 10px 40px;
+    margin-bottom: 25px;
   }
   #la-roche.la-roche .es-cross {
     margin-top: 75px;
