@@ -414,7 +414,7 @@
   justify-content: center;
   align-items: flex-end;
   position: relative;
-  min-height: 500px;
+  min-height: 651px;
 }
 #la-roche.la-roche .es-cross:nth-child(2) {
   align-self: flex-start;
@@ -424,7 +424,7 @@
   text-transform: uppercase;
   text-align: center;
   padding-top: 50px;
-  font-size: clamp(1rem, 1.1222rem + 0.9889vw, 5.1rem);
+  font-size: clamp(1rem, 1.1222rem + 0.9889vw, 5.7rem);
 }
 #la-roche.la-roche .es-cross__single {
   display: flex;
@@ -750,14 +750,60 @@
     margin-bottom: 25px;
   }
   #la-roche.la-roche .es-cross {
-    margin-top: 75px;
+    margin-top: 120px;
+  }
+  #la-roche.la-roche .es-cross__number {
+    font-size: clamp(4.375rem, 1.5972rem + 8.8889vw, 10.375rem);
   }
   #la-roche.la-roche .es-cross__name {
     margin-top: -20px;
-    font-size: 20px;
+    margin-bottom: 10px;
+    font-size: 31px;
+  }
+  #la-roche.la-roche .es-cross__name-subtitle {
+    display: block;
+    font-size: 22px;
+    max-width: 16ch;
+    margin-top: 0;
+    padding-top: 0;
+    text-transform: uppercase;
+  }
+  #la-roche.la-roche .es-cross__content--1 {
+    margin-top: -120px;
+    margin-left: 10px;
+  }
+  #la-roche.la-roche .es-cross__content--2 {
+    margin-top: 160px;
+    margin-right: 50px;
+  }
+  #la-roche.la-roche .es-cross__content--3 {
+    margin-top: -177px;
+    margin-left: 26px;
   }
   #la-roche.la-roche .es-cross__desc {
     max-width: 23ch;
     font-size: 14px;
+    margin-bottom: 20px;
+  }
+  #la-roche.la-roche .es-cross__single--1 {
+    top: 54px;
+    left: 104px;
+  }
+  #la-roche.la-roche .es-cross__single--2 {
+    top: 348px;
+    right: 20px;
+  }
+  #la-roche.la-roche .es-cross__single--3 {
+    bottom: -324px;
+    left: 69px;
+  }
+  #la-roche.la-roche .es-cross__single--1 img {
+    height: 600px;
+  }
+  #la-roche.la-roche .es-cross__single--2 img {
+    height: 419px;
+  }
+  #la-roche.la-roche .es-cross__single--3 img {
+    height: 475px;
   }
 }/*# sourceMappingURL=style.css.map */
