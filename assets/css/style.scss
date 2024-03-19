@@ -684,18 +684,12 @@ $background-color_4: #fff;
       background-image: url(../img/cross-bg.png);
       background-repeat: no-repeat;
       background-size: contain;
-      background-position: left -275px;
+      background-position: left -430px;
     }
 
     .es-features {
-      // background-position: -150px;
-
       &__logo {
         max-width: 65%;
-      }
-
-      &__content {
-        // padding-left: 100px;
       }
     }
 
@@ -774,7 +768,6 @@ $background-color_4: #fff;
     }
 
     .es-features {
-      // background-position: -50px;
       background-image: url(../img/feat-ingr-bg.png);
       background-repeat: no-repeat;
       background-size: cover;
